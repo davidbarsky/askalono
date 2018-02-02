@@ -24,8 +24,11 @@ extern crate rmp_serde as rmps;
 extern crate serde;
 #[macro_use]
 extern crate serde_derive;
-extern crate serde_json as json;
 extern crate unicode_normalization;
+
+#[cfg(feature = "spdx")]
+extern crate serde_json as json;
+#[cfg(feature = "spdx")]
 extern crate walkdir;
 
 mod ngram;
